@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Chatroom</title>
-<link href="style.css" rel="stylesheet">
-<script src="chatroom.js"></script>
-<style>
+  <title>CITSA TALK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
    body {
       margin: 0;
       padding: 0;
@@ -87,9 +86,8 @@
   </style>
 </head>
 <body>
-<div id="chatbox">
-<div class="container">
-  <div class="header">
+  <div class="container">
+    <div class="header">
       <h1>CITSA TALK</h1>
     </div>
     <div class="navbar">
@@ -98,20 +96,32 @@
   <a href="#channels">Channels</a>
   <a href="profile.html">My Profile</a>
 </div>
-<body>
-<div id="chatbox">
-<div class="container">
-  <div class="header">
-    <h1>Java for Web Development</h1>
+
+    <div class="section">
+      <h2>Narrow Your Search</h2>
+      <p>Search by Name</p>
+      <input class="search-input" type="text" placeholder="Enter a search term">
+      <div class="icon">&#128269;</div>
+      <p>Search in Channel</p>
+      <input class="search-input" type="text" placeholder="Enter a search term">
+      <div class="icon">&#128269;</div>
+      <p>Search in Thread</p>
+      <input class="search-input" type="text" placeholder="Enter a search term">
+      <div class="icon">&#128269;</div>
+    </div>
+    <div class="section">
+      <h2 id="thread">Threads</h2>
+      <ul>
+      <p><a href="chat.html">Java for Web Development</a></p>
+      <p><a href="chat2.html">Cybersecurity for Students</a></p>
+      <p><a href="chat3.html">Automation with Java</a></p>
+  </ul>
+    </div>
+    <div class="section">
+      <h2 id="channels">Channels</h2>
+      <p>#Introduction to Computing</p>
+      <p>#Databases</p>
+    </div>
   </div>
-  <div class="messages" id="messages">
-    <!-- Messages will be displayed here -->
-  </div>
-  <div class="message">
-    <input type="text" id="inputMessage" placeholder="Type message here ...">
-    <button id="sendButton">Send</button>
-  </div>
-</div>
-</div>
 </body>
 </html>

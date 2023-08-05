@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Additional custom styling can be kept here */
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white text-center">
+                        Profile
+                    </div>
+                    <a href="home.html">Back </a>
+                    <div class="card-body text-center">
+                        <div class="profile-picture">
+                            <img src="me.jpeg" alt="Profile Picture" class="img-fluid rounded-circle" width="=50px" height="50px">
+                        </div>
+                        <div class="profile-name h4 mt-3">Desmond Dadzie</div>
+                        <div class="profile-occupation">Student</div>
+                        <div class="contact-info font-weight-bold mt-4">Contact Information</div>
+                        <div class="border-bottom my-3"></div>
+                        <div class="bio">I am a L200 IT student<br>who specializes in UI/UX<br>design</div>
+                        <textarea class="form-control bio-input d-none" id="bio-input" rows="3" placeholder="Edit your bio"></textarea>
+                        <button class="btn btn-primary edit-profile-btn" id="edit-btn">Edit Profile</button>
+                        <button class="btn btn-success edit-profile-btn d-none" id="save-btn">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (needed for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const editBtn = document.getElementById("edit-btn");
+            const saveBtn = document.getElementById("save-btn");
+            const bioField = document.querySelector(".bio");
+            const bioInput = document.getElementById("bio-input");
+
+            let originalBio;
+
+            function toggleEditFields() {
+                if (editBtn.style.display === "none") {
+                    // Save changes
+                    bioField.innerText = bioInput.value;
+                    bioInput.classList.add("d-none");
+                    bioField.classList.remove("d-none");
+                    editBtn.classList.remove("d-none");
+                    saveBtn.classList.add("d-none");
+                } else {
+                    // Enter edit mode
+                    originalBio = bioField.innerText;
+                    bioInput.value = originalBio;
+                    bioField.classList.add("d-none");
+                    bioInput.classList.remove("d-none");
+                    editBtn.classList.add("d-none");
+                    saveBtn.classList.remove("d-none");
+                }
+            }
+
+            editBtn.addEventListener("click", function () {
+                toggleEditFields();
+            });
+
+            saveBtn.addEventListener("click", function () {
+                bioField.innerText = bioInput.value;
+                toggleEditFields();
+            });
+
+            bioInput.addEventListener("input", function () {
+                saveBtn.classList.remove("d-none");
+            });
+        });
+    </script>
+</body>
+
+</html>
