@@ -1,0 +1,19 @@
+{
+  "lang": "en-us",
+  "name": "CITSA TALK",
+  "short_name": "CITSA TALK",
+  "description": "A simple chat to aid learning amongst students",
+  "scope": "/java-project-b.scIT-group-2/", 
+  "start_url": "/java-project-b.scIT-group-2/",
+  "background_color": "#2f3d58",
+  "theme_color": "#2f3d58",
+  "orientation": "any",
+  "display": "standalone",
+  "icons": [
+      {
+          "src": "/java-project-b.scIT-group-2/CITSA.png",
+          "type": "image/png",
+          "sizes": "512x512"
+      }
+  ]
+}
