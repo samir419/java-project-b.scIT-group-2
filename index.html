@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="canonical" href="https://samir419.github.io/java-project-b.scIT-group-2/" />
+    <link rel="manifest" href="https://samir419.github.io/java-project-b.scIT-group-2/manifest.json">
     <style>
         body {
             margin: 0;
@@ -133,6 +135,11 @@
         alert('Create Account link clicked');
     }
 </script>
+    <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/java-project-b.scIT-group-2/sw.js', { scope: '/java-project-b.scIT-group-2/' });
+    }
+    </script>
 
 </body>
 </html>
